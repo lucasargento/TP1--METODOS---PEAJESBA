@@ -2,7 +2,7 @@
 
 
 # PUNTO A: load data 
-data = load('FlujoVehicular2019.dat');
+data = load('dataset/FlujoVehicular2019.dat');
 
 # mapeo nombres - columnas del dataset
 
