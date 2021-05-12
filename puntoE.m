@@ -43,3 +43,18 @@ disp(matriz_livianos_por_estacion_ordenada);
 disp(' ');
 disp('  Estacion  Pasos de Vehiculos Pesados')
 disp(matriz_pesados_por_estacion_ordenada);
+disp(' ');
+
+bar(matriz_livianos_por_estacion_ordenada(:,1), matriz_livianos_por_estacion_ordenada(:,2), 0.4)
+title ("CANTIDAD DE PASOS DE VEHICULOS LIVIANOS POR ESTACIÓN");
+set(gca,'fontsize',12);
+set(gca,'XTick',1:24);
+xlabel ("Estaciones");
+ylabel ("Cantidad de pasos");
+
+##bar(matriz_pesados_por_estacion_ordenada(:,1), matriz_pesados_por_estacion_ordenada(:,2), 0.4)
+##title ("CANTIDAD DE PASOS DE VEHICULOS LIVIANOS POR ESTACIÓN");
+##set(gca,'fontsize',12);
+##set(gca,'XTick',1:24);
+##xlabel ("Estaciones");
+##ylabel ("Cantidad de pasos");
