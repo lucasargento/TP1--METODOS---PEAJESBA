@@ -20,6 +20,7 @@ cantidadpasos = 9;
 #Pasos totales por estaci�n.
 
 vector_pasostot_por_estacion = zeros(8,1);
+cantidad_de_filas = rows(data);
 
 #lee por cada fila la estaci�n que se analiza y suma los pasos a un vector.
 for fila = 1:cantidad_de_filas

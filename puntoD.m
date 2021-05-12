@@ -11,6 +11,7 @@ sentido = 6;
 tipovehiculo = 7;
 formapago = 8;
 cantidadpasos = 9;
+cantidad_de_filas = rows(data);
 
 # PUNTO D
 # IDENTIFICAR LAS DOS FRANJAS DE TRES HORAS CADA UNA, SIN SOLAPARSE QUE PRESENTAN MAYOR MOVILIDAD. CONTABILIZARLAS PARA TODAS LAS UNIDADES DE PEAJES TANTO INGRESOS COMO EGRESOS. GRAFICAR.
@@ -40,3 +41,6 @@ endfor
 disp("cantidad de pasos por cada franja horaria de 3 horas:");
 # obtengo ordenadas las franjas horarias y sus ingresos para saber cuales son las dos con mayor cantidad de pasos.
 disp(sortrows(vector_franjas_horarias,4));
+
+# Grafico la cantidad de pasos por cada una de las franjas horarias. 
+bar(vector_franjas_horarias(:,4));
