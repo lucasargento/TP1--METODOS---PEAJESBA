@@ -44,3 +44,8 @@ disp(sortrows(vector_franjas_horarias,4));
 
 # Grafico la cantidad de pasos por cada una de las franjas horarias. 
 bar(vector_franjas_horarias(:,4));
+title ('CANTIDAD DE PASOS POR FRANJA HORARIA');
+set(gca,'fontsize',12);
+xlabel ("Franjas horarias");
+ylabel ("Cantidad de pasos");
+print -djpg graficos/puntoD/cantidad_de_pasos_por_franja_horaria.jpg

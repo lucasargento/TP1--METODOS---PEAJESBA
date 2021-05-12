@@ -101,8 +101,27 @@ disp('Y es la hora:');
 disp(hora_del_maximo);
 
 # grafico la cantidad de no pagados x hora
-bar(matriz_contador_tipos_hora(:,5));
-# grafico los distintos tipos de codigos de no pagado para la hora con mayor cantidad de casos no pagos. (luego de observar el grafico se que es la hora )
-bar(matriz_contador_tipos_hora(hora_del_maximo,:));
+bar(matriz_contador_tipos_hora(2:24,5));
+title ('CANTIDAD DE NO PAGADOS POR HORA');
+set(gca,'fontsize',10);
+set(gca,'XTick',0:23);
+ylim ([0 800000]);
+xlabel ("Hora");
+ylabel ("Cantidad de no pagos");
+print -djpg graficos/puntoH/Grafico_cantidad_no_pagados_por_hora.jpg 
+# grafico los distintos tipos de codigos de no pagado para la hora con mayor cantidad de casos no pagos. (luego de saber cual es la hora del maximo)
+bar(matriz_contador_tipos_hora(hora_del_maximo,1:4));
+title ('CANTIDAD POR CÒDIGO PARA LA HORA MAXIMA');
+set(gca,'fontsize',8);
+set(gca,'XTick',['102','103','104','105']);
+xlabel ("Código");
+ylabel ("Cantidad de no pagos");
+print -djpg graficos/puntoH/Grafico_distribucion_de_tipos_nopago_en_hora_del_maximo.jpg
 # grafico los totales por tipo en la totalidad del tiempo
 bar(vector_totales_por_tipo);
+title ('CANTIDADES TOTALES POR CÒDIGO HISTORICO');
+set(gca,'fontsize',10);
+set(gca,'XTick',102:105);
+xlabel ("Código");
+ylabel ("Cantidad de no pagos");
+print -djpg graficos/puntoH/Grafico_distribucion_de_tipos_nopago_historico.jpg

@@ -67,8 +67,11 @@ set(gca,'fontsize',12);
 set(gca,'XTick',1:24);
 xlabel ("HORA");
 ylabel ("Cantidad de pasos");
-#plot(vector_egresos_hora, 'color', 'r',";CANTIDAD DE EGRESOS POR HORA;")
-#xlabel ("HORA");
-#ylabel ("Cantidad de pasos");
-#title ("CANTIDAD DE EGRESOS POR HORA");
-#set(gca,'fontsize',12);
+print -djpg graficos/puntoC/cantidad_ingresos_estacionmax.jpg
+
+plot(vector_egresos_hora, 'color', 'r',";CANTIDAD DE EGRESOS POR HORA;")
+xlabel ("HORA");
+ylabel ("Cantidad de pasos");
+title ("CANTIDAD DE EGRESOS POR HORA");
+set(gca,'fontsize',12);
+print -djpg graficos/puntoC/cantidad_egresos_estacionmax.jpg
