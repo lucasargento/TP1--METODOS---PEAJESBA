@@ -1,3 +1,4 @@
+  
 data = load('dataset/FlujoVehicular2019.dat');
 
 # mapeo nombres - columnas del dataset
@@ -24,7 +25,8 @@ vector_franjas_horarias = [-1 -1 -1 -1];
 for hora_numero = 0:21
   vector_franjas_horarias = [vector_franjas_horarias; hora_numero hora_numero + 1 hora_numero + 2 0];
 endfor
-
+disp('Franjas horarias:')
+disp(vector_franjas_horarias(2:23,1:3));
 # Recuento cantidad de ingresos + egresos para cada franja horaria, los voy a contar en la cuarta columna de la matriz que cree arriba vector_franjas_horarias
 
 for fila_data = 1:cantidad_de_filas
@@ -40,12 +42,14 @@ endfor
 
 disp("cantidad de pasos por cada franja horaria de 3 horas:");
 # obtengo ordenadas las franjas horarias y sus ingresos para saber cuales son las dos con mayor cantidad de pasos.
-disp(sortrows(vector_franjas_horarias,4));
+disp(sortrows(vector_franjas_horarias(2:23,1:4  ),4));
 
 # Grafico la cantidad de pasos por cada una de las franjas horarias. 
-bar(vector_franjas_horarias(:,4));
+bar(vector_franjas_horarias(2:23,4));
 title ('CANTIDAD DE PASOS POR FRANJA HORARIA');
 set(gca,'fontsize',12);
+set(gca,'XTick',1:23);
+ylim([0 3e+07])
 xlabel ("Franjas horarias");
 ylabel ("Cantidad de pasos");
-print -djpg graficos/puntoD/cantidad_de_pasos_por_franja_horaria.jpg
+#print -djpg graficos/puntoD/cantidad_de_pasos_por_franja_horaria.jpg

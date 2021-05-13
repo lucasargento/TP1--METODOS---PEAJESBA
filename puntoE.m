@@ -21,7 +21,7 @@ cantidad_de_filas = rows(data);
 matriz_livianos_por_estacion = zeros (8,2);
 matriz_pesados_por_estacion = zeros (8,2);
 
-#lee por cada fila del archivo la estaciï¿½n que se analiza, se fija si es liviano y suma los pasos a en la 2da columna los pasos.
+#lee por cada fila del archivo la estación que se analiza, se fija si es liviano y suma los pasos a en la 2da columna los pasos.
 #mientras que en la primera fija la posicion de la estacion.
 for fila = 1:cantidad_de_filas
   estacion_analizada_E = data(fila, estacion);
@@ -46,18 +46,17 @@ disp(matriz_pesados_por_estacion_ordenada);
 disp(' ');
 
 bar(matriz_livianos_por_estacion_ordenada(:,1), matriz_livianos_por_estacion_ordenada(:,2), 0.4)
-title ("CANTIDAD DE PASOS DE VEHICULOS LIVIANOS POR ESTACIï¿½N");
+title ("CANTIDAD DE PASOS DE VEHICULOS LIVIANOS POR ESTACIÓN");
 set(gca,'fontsize',12);
-set(gca,'XTick',1:24);
+set(gca,'XTick',1:8);
 xlabel ("Estaciones");
 ylabel ("Cantidad de pasos");
-print -djpg graficos/puntoE/cantidad_livianos_por_estacion.jpg
+print -djpg graficos/puntoE/grafico_pasos_livianos_x_estacion.jpg 
 
-
-bar(matriz_pesados_por_estacion_ordenada(:,1), matriz_pesados_por_estacion_ordenada(:,2), 0.4)
-title ("CANTIDAD DE PASOS DE VEHICULOS PESADOS POR ESTACIï¿½N");
+bar(matriz_pesados_por_estacion(:,2),0.4)
+title ("CANTIDAD DE PASOS DE VEHICULOS PESADOS POR ESTACIÓN");
 set(gca,'fontsize',12);
-set(gca,'XTick',1:24);
+set(gca,'XTick',1:8);
 xlabel ("Estaciones");
 ylabel ("Cantidad de pasos");
-print -djpg graficos/puntoE/cantidad_pesados_por_estacion.jpg
+print -djpg graficos/puntoE/grafico_pasos_pesados_x_estacion.jpg 

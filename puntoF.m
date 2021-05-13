@@ -1,4 +1,4 @@
-# TP NUMERO 1 -- PEAJES -- PUNTO G
+# TP NUMERO 1 -- PEAJES -- PUNTO F
 # PUNTO A: load data 
 data = load('dataset/FlujoVehicular2019.dat');
 

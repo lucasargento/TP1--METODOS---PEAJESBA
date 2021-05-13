@@ -1,4 +1,4 @@
-# TP NUMERO 1 -- PEAJES
+# TP NUMERO 1 -- PEAJES -- punto H
 
 
 # PUNTO A: load data 
@@ -17,7 +17,7 @@ formapago = 8;
 cantidadpasos = 9;
 
 #Punto C:
-#Pasos totales por estaci�n.
+#Pasos totales por estaci�n.
 
 vector_pasostot_por_estacion = zeros(8,1);
 cantidad_de_filas = rows(data);
@@ -104,24 +104,26 @@ disp(hora_del_maximo);
 bar(matriz_contador_tipos_hora(2:24,5));
 title ('CANTIDAD DE NO PAGADOS POR HORA');
 set(gca,'fontsize',10);
-set(gca,'XTick',0:23);
+set(gca,'xTick',0:23);
 ylim ([0 800000]);
-xlabel ("Hora");
+xlabel ("Horas");
 ylabel ("Cantidad de no pagos");
 print -djpg graficos/puntoH/Grafico_cantidad_no_pagados_por_hora.jpg 
 # grafico los distintos tipos de codigos de no pagado para la hora con mayor cantidad de casos no pagos. (luego de saber cual es la hora del maximo)
 bar(matriz_contador_tipos_hora(hora_del_maximo,1:4));
-title ('CANTIDAD POR CÒDIGO PARA LA HORA MAXIMA');
-set(gca,'fontsize',8);
-set(gca,'XTick',['102','103','104','105']);
-xlabel ("Código");
+title ('CANTIDAD POR CADA TIPO PARA LA HORA MAXIMA');
+set(gca,'fontsize',10);
+set(gca,'xTick',1:4);
+xticklabels({'Exento','Infraccion','No Cobrado','Discapacidad'})
+xlabel ("Tipo de Incobrabilidad");
 ylabel ("Cantidad de no pagos");
 print -djpg graficos/puntoH/Grafico_distribucion_de_tipos_nopago_en_hora_del_maximo.jpg
 # grafico los totales por tipo en la totalidad del tiempo
 bar(vector_totales_por_tipo);
-title ('CANTIDADES TOTALES POR CÒDIGO HISTORICO');
+title ('CANTIDADES TOTALES POR CADA TIPO HISTORICO');
 set(gca,'fontsize',10);
-set(gca,'XTick',102:105);
-xlabel ("Código");
+set(gca,'xTick',1:4);
+xticklabels({'Exento','Infraccion','No Cobrado','Discapacidad'})
+xlabel ("Tipo de Incobrabilidad");
 ylabel ("Cantidad de no pagos");
 print -djpg graficos/puntoH/Grafico_distribucion_de_tipos_nopago_historico.jpg

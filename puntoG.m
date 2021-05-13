@@ -36,7 +36,7 @@ title ("CANTIDAD DE PASOS PROMEDIO POR MES EN LA ESTACION 1");
 legend("Ingresos","Egresos",'location','northwest')
 set(gca,'fontsize',10);
 set(gca,'XTick',1:12);
-xticklabels({'Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'})
+xticklabels(1:12)
 xlabel ("MESES");
 ylabel ("Cantidad de pasos promedio");
 print -djpg graficos/puntoG/Grafico_pasos_prom_x_mes_01.jpg 
@@ -49,7 +49,7 @@ title ("CANTIDAD DE PASOS PROMEDIO POR MES EN LA ESTACION 2");
 legend("Ingresos","Egresos",'location','northwest')
 set(gca,'fontsize',10);
 set(gca,'XTick',1:12);
-xticklabels({'Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'})
+xticklabels(1:12)
 xlabel ("MESES");
 ylabel ("Cantidad de pasos promedio");
 print -djpg graficos/puntoG/Grafico_pasos_prom_x_mes_02.jpg 
@@ -62,7 +62,7 @@ title ("CANTIDAD DE PASOS PROMEDIO POR MES EN LA ESTACION 3");
 legend("Ingresos","Egresos",'location','northwest')
 set(gca,'fontsize',10);
 set(gca,'XTick',1:12);
-xticklabels({'Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'})
+xticklabels(1:12)
 xlabel ("MESES");
 ylabel ("Cantidad de pasos promedio");
 print -djpg graficos/puntoG/Grafico_pasos_prom_x_mes_03.jpg 
@@ -75,7 +75,7 @@ title ("CANTIDAD DE PASOS PROMEDIO POR MES EN LA ESTACION 4");
 legend("Ingresos","Egresos",'location','northwest')
 set(gca,'fontsize',10);
 set(gca,'XTick',1:12);
-xticklabels({'Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'})
+xticklabels(1:12)
 xlabel ("MESES");
 ylabel ("Cantidad de pasos promedio");
 print -djpg graficos/puntoG/Grafico_pasos_prom_x_mes_04.jpg 
@@ -88,7 +88,7 @@ title ("CANTIDAD DE PASOS PROMEDIO POR MES EN LA ESTACION 5");
 legend("Ingresos","Egresos",'location','northwest')
 set(gca,'fontsize',10);
 set(gca,'XTick',1:12);
-xticklabels({'Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'})
+xticklabels(1:12)
 xlabel ("MESES");
 ylabel ("Cantidad de pasos promedio");
 print -djpg graficos/puntoG/Grafico_pasos_prom_x_mes_05.jpg 
@@ -101,7 +101,7 @@ title ("CANTIDAD DE PASOS PROMEDIO POR MES EN LA ESTACION 6");
 legend("Ingresos","Egresos",'location','northwest')
 set(gca,'fontsize',10);
 set(gca,'XTick',1:12);
-xticklabels({'Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'})
+xticklabels(1:12)
 xlabel ("MESES");
 ylabel ("Cantidad de pasos promedio");
 print -djpg graficos/puntoG/Grafico_pasos_prom_x_mes_06.jpg 
@@ -114,7 +114,7 @@ title ("CANTIDAD DE PASOS PROMEDIO POR MES EN LA ESTACION 7");
 legend("Ingresos","Egresos",'location','northwest')
 set(gca,'fontsize',10);
 set(gca,'XTick',1:12);
-xticklabels({'Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'})
+xticklabels(1:12)
 xlabel ("MESES");
 ylabel ("Cantidad de pasos promedio");
 print -djpg graficos/puntoG/Grafico_pasos_prom_x_mes_07.jpg 
@@ -127,7 +127,7 @@ title ("CANTIDAD DE PASOS PROMEDIO POR MES EN LA ESTACION 8");
 legend("Ingresos","Egresos",'location','northwest')
 set(gca,'fontsize',10);
 set(gca,'XTick',1:12);
-xticklabels({'Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'})
+xticklabels(1:12)
 xlabel ("MESES");
 ylabel ("Cantidad de pasos promedio");
 print -djpg graficos/puntoG/Grafico_pasos_prom_x_mes_08.jpg 

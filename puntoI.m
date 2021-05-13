@@ -1,4 +1,4 @@
-# TP NUMERO 1 -- PEAJES
+# TP NUMERO 1 -- PEAJES punto I
 
 
 # PUNTO A: load data 
@@ -78,23 +78,23 @@ disp(rows(serie_temporal_efectivo));
 plot(nonzeros(serie_temporal_efectivo));
 title ('SERIE TEMPORAL EFECTIVO');
 set(gca,'fontsize',10);
-xlim ([1 365]);
-xlabel ("DIA");
+set(gca,'xTick',1:30:365);
+xlabel ("DIAS");
 ylabel ("Cantidad de pagos");
 print -djpg graficos/puntoI/Grafico_serie_temporal_efectivo.jpg
  
 plot(nonzeros(serie_temporal_telepase));
 title ('SERIE TEMPORAL TELEPASE');
 set(gca,'fontsize',10);
-xlim ([1 365]);
-xlabel ("DIA");
+set(gca,'xTick',1:30:365);
+xlabel ("DIAS");
 ylabel ("Cantidad de pagos");
 print -djpg graficos/puntoI/Grafico_serie_temporal_telepase.jpg 
 
 plot(nonzeros(serie_temporal_totales));
 title ('SERIE TEMPORAL EFECTIVO + TELEPASE');
 set(gca,'fontsize',10);
-xlim ([1 365]);
-xlabel ("DIA");
+set(gca,'xTick',1:30:365);
+xlabel ("DIAS");
 ylabel ("Cantidad de pagos");
 print -djpg graficos/puntoI/Grafico_serie_temporal_totales.jpg 
